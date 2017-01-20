@@ -64,11 +64,13 @@ LinkedList.prototype.removeByPosition = function (position) {
 
   this._length--;
   var currentNode = this.head;
+
   if (position === 0) {
     this.head = currentNode.next;
     return currentNode;
   }
 
+  // find node
   for (var i = 0; i < position - 1; i++) {
     currentNode = currentNode.next;
   }
